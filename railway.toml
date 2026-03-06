@@ -1,0 +1,14 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./Dockerfile"
+
+[deploy]
+startCommand = "python bot.py"
+restartPolicyType = "always"
+restartPolicyMaxRetries = 10
+restartPolicyMaxRetryDelay = "5m"
+
+[env]
+PYTHONUNBUFFERED = "1"
+PYTHONDONTWRITEBYTECODE = "1"
+
